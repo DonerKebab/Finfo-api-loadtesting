@@ -11,12 +11,12 @@ class  WebsiteTasks(TaskSet):
 
     @task
     def derivatives(self):
-        endpoint = "/api/trade/derivatives/intraday"
+        endpoint = "/trade/derivatives/intraday"
         self.client.request(method="GET", url=endpoint)
 
     @task
     def market(self):
-        endpoint = "/api/index/securities/vnmarket/intraday"
+        endpoint = "/index/securities/vnmarket/intraday"
         self.client.request(method="GET", url=endpoint)
 
 
